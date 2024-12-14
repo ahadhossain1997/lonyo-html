@@ -44,13 +44,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     $(".lonyo-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    lonyo HEADER SEARCH JS INIT
-    ------------------------------------------------------------*/
-    $(".lonyo-header-search, .lonyo-header-search-close, .search-overlay").click(function () {
-      $(".lonyo-header-search-section, .search-overlay").toggleClass("open");
-    });
-
-    /*--------------------------------------------------------------
     lonyo STICKY MENU JS INIT
     --------------------------------------------------------------*/
     $(window).on('scroll', function () {
@@ -674,4 +667,19 @@ $(function () {
     });
   }
   scrNav();
+});
+$(function () {
+  var activeIndex = $('.active-tab').index(),
+    $contentlis = $('.tabs-content li'),
+    $tabslis = $('.tabs li');
+
+  // Show content of active tab on loads
+  $contentlis.eq(activeIndex).show();
+  $('.tabs').on('click', 'li', function (e) {
+    var $current = $(e.currentTarget),
+      index = $current.index();
+    $tabslis.removeClass('active-tab');
+    $current.addClass('active-tab');
+    $contentlis.hide().eq(index).show();
+  });
 });
