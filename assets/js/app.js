@@ -125,38 +125,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         mainClass: 'mfp-fade'
       });
     }
-    var brand_slider = $('.lonyo-brand-slider-wrap');
+    var brand_slider = $('.brand-slider-js-init');
     if (brand_slider.is_exist()) {
       brand_slider.slick({
-        slidesToShow: 7,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 8000,
+        speed: 50000,
         arrows: false,
         pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
+        cssEase: 'linear'
       });
     }
 
