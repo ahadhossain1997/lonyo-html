@@ -1,5 +1,9 @@
 "use strict";
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -100,20 +104,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }, duration);
       return false;
     });
-    var hero_slider = $('.lonyo-hero-slider-init');
-    if (hero_slider.is_exist()) {
-      hero_slider.slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        arrows: true,
-        infinite: true,
-        speed: 1000,
-        lazyLoad: 'progressive',
-        prevArrow: '<button class="slide-arrow lonyo-hero-next"></button>',
-        nextArrow: '<button class="slide-arrow lonyo-hero-prev"></button>'
-      }).slickAnimation();
-    }
 
     /*--------------------------------------------------------------
     lonyo MAGNIFIC PUPOP JS INIT
@@ -352,29 +342,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     })(jQuery);
 
     /*--------------------------------------------------------------
-    lonyo TOOGLE BUTTON JS INIT
-    --------------------------------------------------------------*/
-
-    $(document).ready(function () {
-      $(".toggle-button").change(function () {
-        toggle(this.checked);
-      });
-
-      // Uncomment this to disaplay monthly on page load
-      toggle(false);
-      function toggle(checked) {
-        $(".toggle-button").prop('checked', checked);
-        if (checked) {
-          $('.coreMonthlyPrice, .proMonthlyPrice').show();
-          $('.coreAnnuallyText, .coreAnnuallyPrice, .proAnnuallyPrice').hide();
-        } else {
-          $('.coreMonthlyPrice,.proMonthlyPrice').hide();
-          $('.coreAnnuallyText,.coreAnnuallyPrice, .proAnnuallyPrice').show();
-        }
-      }
-    });
-
-    /*--------------------------------------------------------------
     lonyo CURRENT YEAR JS INIT
     --------------------------------------------------------------*/
 
@@ -393,80 +360,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   $(window).on("resize", function () {}); // end window resize
 
   $(window).on('load', function () {}); // End window LODE
-
-  /*--------------------------------------------------------------
-  lonyo PORTFOLIO MASONAY FILTER JS
-  ------------------------------------------------------------*/
-
-  var luminix_filter_gallery = $('#lonyo-portfolio-grid');
-  if (luminix_filter_gallery.is_exist()) {
-    var $container = $(luminix_filter_gallery),
-      colWidth = function colWidth() {
-        var w = $container.width(),
-          columnNum = 1,
-          columnWidth = 0;
-        if (w > 1200) {
-          columnNum = 2;
-        } else if (w > 900) {
-          columnNum = 2;
-        } else if (w > 600) {
-          columnNum = 2;
-        } else if (w > 450) {
-          columnNum = 1;
-        } else if (w > 385) {
-          columnNum = 1;
-        }
-        columnWidth = Math.floor(w / columnNum);
-        $container.find('.collection-grid-item').each(function () {
-          var $item = $(this),
-            multiplier_w = $item.attr('class').match(/collection-grid-item-w(\d)/),
-            multiplier_h = $item.attr('class').match(/collection-grid-item-h(\d)/),
-            width = multiplier_w ? columnWidth * multiplier_w[1] : columnWidth,
-            height = multiplier_h ? columnWidth * multiplier_h[1] * 0.4 - 12 : columnWidth * 0.5;
-          $item.css({
-            width: width
-            //height: height
-          });
-        });
-        return columnWidth;
-      },
-      isotope = function isotope() {
-        $container.isotope({
-          resizable: false,
-          itemSelector: '.collection-grid-item',
-          masonry: {
-            columnWidth: colWidth(),
-            gutterWidth: 0
-          }
-        });
-      };
-    isotope();
-    $(window).resize(isotope);
-    var $optionSets = $('.lonyo-portfolio-menu .option-set'),
-      $optionLinks = $optionSets.find('li');
-    $optionLinks.click(function () {
-      var $this = $(this);
-      var $optionSet = $this.parents('.option-set');
-      $optionSet.find('.active').removeClass('active');
-      $this.addClass('active');
-
-      // make option object dynamically, i.e. { filter: '.my-filter-class' }
-      var options = {},
-        key = $optionSet.attr('data-option-key'),
-        value = $this.attr('data-option-value');
-      // parse 'false' as false boolean
-      value = value === 'false' ? false : value;
-      options[key] = value;
-      if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-        // changes in layout modes need extra logic
-        changeLayoutMode($this, options);
-      } else {
-        // creativewise, apply new options
-        $container.isotope(options);
-      }
-      return false;
-    });
-  }
 
   /*--------------------------------------------------------------
   lonyo MAP JS
@@ -599,54 +492,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     };
     google.maps.event.addDomListener(window, 'load', init);
   }
-
-  // magic hover
-
-  var $items = $(".lonyo-career-wrap");
-  if ($items.length) {
-    $items.on("mouseover", function () {
-      // Remove 'hovered' class from all items
-      $items.removeClass("hovered");
-
-      // Add 'hovered' class to the current item
-      $(this).addClass("hovered");
-    });
-  }
 })(jQuery);
-$(function () {
-  var link = $('#scroll-btn a.lonyo-default-btn.faq-btn');
-
-  // Move to specific section when click on menu link
-  link.on('click', function (e) {
-    var target = $($(this).attr('href'));
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 600);
-    $(this).addClass('active');
-    e.preventDefault();
-  });
-
-  // Run the scrNav when scroll
-  $(window).on('scroll', function () {
-    scrNav();
-  });
-
-  // scrNav function 
-  // Change active dot according to the active section in the window
-  function scrNav() {
-    var sTop = $(window).scrollTop();
-    $('section').each(function () {
-      var id = $(this).attr('id'),
-        offset = $(this).offset().top - 1,
-        height = $(this).height();
-      if (sTop >= offset && sTop < offset + height) {
-        link.removeClass('active');
-        $('#scroll-btn').find('[data-scroll="' + id + '"]').addClass('active');
-      }
-    });
-  }
-  scrNav();
-});
 $(function () {
   var activeIndex = $('.active-tab').index(),
     $contentlis = $('.tabs-content li'),
@@ -662,3 +508,17 @@ $(function () {
     $contentlis.hide().eq(index).show();
   });
 });
+
+// vertical slider
+$('.lonyo-service-vertical-slider').slick(_defineProperty(_defineProperty(_defineProperty({
+  dots: false,
+  speed: 5000,
+  slidesToShow: 2,
+  centerMode: true,
+  arrows: false,
+  vertical: true,
+  focusOnSelect: true,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0
+}, "arrows", false), "pauseOnHover", false), "cssEase", 'linear'));
