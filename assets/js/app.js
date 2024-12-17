@@ -204,27 +204,24 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     /*--------------------------------------------------------------
     lonyo  TESTIMONIAL SLIDER JS INIT
     --------------------------------------------------------------*/
-    var t_slider = $('.lonyo-testimonial-slider');
+    var t_slider = $('.lonyo-testimonial-slider-init');
     if (t_slider.is_exist()) {
       t_slider.slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        arrows: false,
+        dots: false,
         autoplay: true,
-        dots: true,
-        centerMode: true,
-        speed: 500,
+        autoplaySpeed: 0,
+        speed: 6000,
+        arrows: false,
+        pauseOnHover: false,
+        cssEase: 'linear',
         centerPadding: '180px',
         lazyLoad: 'progressive',
         responsive: [{
-          breakpoint: 1349,
+          breakpoint: 1199,
           settings: {
             slidesToShow: 2
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1
           }
         }, {
           breakpoint: 767,
