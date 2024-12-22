@@ -128,75 +128,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         cssEase: 'linear'
       });
     }
-    var testimonial_slider_data = $('.lonyo-slider-icon-data');
-    if (testimonial_slider_data.is_exist()) {
-      testimonial_slider_data.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
-    var testimonial_slider_data_wrap = $('.lonyo-slider-icon-data2');
-    if (testimonial_slider_data_wrap.is_exist()) {
-      testimonial_slider_data_wrap.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        rtl: true,
-        responsive: [{
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
-    }
 
     /*--------------------------------------------------------------
     lonyo COUNTER JS INIT
@@ -303,6 +234,75 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           settings: {
             slidesToShow: 1,
             centerPadding: '0px'
+          }
+        }]
+      });
+    }
+    var testimonial_slider_data = $('.lonyo-slider-icon-data');
+    if (testimonial_slider_data.is_exist()) {
+      testimonial_slider_data.slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 5000,
+        arrows: false,
+        pauseOnHover: false,
+        cssEase: 'linear',
+        responsive: [{
+          breakpoint: 1399,
+          settings: {
+            slidesToShow: 5
+          }
+        }, {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        }]
+      });
+    }
+    var testimonial_slider_data_wrap = $('.lonyo-slider-icon-data2');
+    if (testimonial_slider_data_wrap.is_exist()) {
+      testimonial_slider_data_wrap.slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 5000,
+        arrows: false,
+        pauseOnHover: false,
+        cssEase: 'linear',
+        rtl: true,
+        responsive: [{
+          breakpoint: 1399,
+          settings: {
+            slidesToShow: 5
+          }
+        }, {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
           }
         }]
       });
@@ -577,6 +577,18 @@ $(function () {
 
 // vertical slider
 $('.lonyo-service-vertical-slider').slick(_defineProperty(_defineProperty(_defineProperty({
+  dots: false,
+  speed: 5000,
+  slidesToShow: 2,
+  centerMode: true,
+  arrows: false,
+  vertical: true,
+  focusOnSelect: true,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0
+}, "arrows", false), "pauseOnHover", false), "cssEase", 'linear'));
+$('.lonyo-service-vertical-slider2').slick(_defineProperty(_defineProperty(_defineProperty({
   dots: false,
   speed: 5000,
   slidesToShow: 2,
