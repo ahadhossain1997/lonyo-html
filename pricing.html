@@ -107,7 +107,13 @@
               <li><a href="pricing.html">Pricing</a></li>
               <li><a href="Contact-Us.html">Contact-Us</a></li>
               <li><a href="testimonial.html">Testimonial</a></li>
-              <li><a href="integration.html">Integratios</a></li>
+              <li class="menu-item-has-children">
+                <a class="no-border" href="#">Integratios</a>
+                <ul class="sub-menu">
+                  <li><a href="integration.html">Integratios</a></li>
+                  <li><a href="single-integration.html">Integratios Details</a></li>
+                </ul>
+              </li>
               <li class="menu-item-has-children">
                 <a class="no-border" href="#">Team</a>
                 <ul class="sub-menu">
@@ -209,7 +215,13 @@
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="testimonial.html">Testimonial</a></li>
-                    <li><a href="integration.html">Integratios</a></li>
+                    <li class="menu-item-has-children">
+                      <a class="no-border" href="#">Integratios</a>
+                      <ul class="sub-menu">
+                        <li><a href="integration.html">Integratios</a></li>
+                        <li><a href="single-integration.html">Integratios Details</a></li>
+                      </ul>
+                    </li>
                     <li class="menu-item-has-children">
                       <a class="no-border" href="#">Team</a>
                       <ul class="sub-menu">
@@ -292,18 +304,18 @@
 
   <!-- End mobile menu -->
 
-  <div class="breadcrumb-wrapper" style="background-image: url(assets/images/pricing/pricing1.png)">
+  <div class="breadcrumb-wrapper light-bg">
     <div class="container">
 
       <div class="breadcrumb-content">
-        <h1 class="breadcrumb-title">Pricing</h1>
+        <h1 class="breadcrumb-title">Contact Us</h1>
         <div class="breadcrumb-menu-wrapper">
           <div class="breadcrumb-menu-wrap">
             <div class="breadcrumb-menu">
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><img src="assets/images/blog/right-arrow.svg" alt="right-arrow"></li>
-                <li aria-current="page">Pricing</li>
+                <li aria-current="page">Contact Us</li>
               </ul>
             </div>
           </div>
@@ -314,247 +326,423 @@
   </div>
   <!-- End breadcrumb -->
 
-  <section class="lonyo-padding-section4">
+  <div class="lonyo-section-padding10">
     <div class="container">
       <div class="lonyo-section-title center">
-        <h2>Explore our service fees and packages</h2>
+        <h2 class="title">Pick from one of our ready packages</h2>
+        <p>Starts at just $20/month, with no ads or hidden fees, after a 14-day free trial. Your card will not be charged until your free trial ends.</p>
       </div>
-      <div class="row">
+      <div class="pricing-btn">
+        <label>Per Month</label>
+        <div class="toggle-btn">
+          <input class="form-check-input btn-toggle price-deck-trigger" type="checkbox" id="flexSwitchCheckDefault" data-pricing-trigger data-target="#table-price-value" checked>
+        </div>
+        <label>Per Year</label>
+      </div>
+      <div class="row" id="table-price-value" data-pricing-dynamic data-value-active="monthly">
         <div class="col-xl-4 col-lg-6">
-          <div class="lonyo-pricing-wrap light-bg1">
+          <div class="lonyo-pricing-wrap">
             <div class="lonyo-pricing-header">
-              <h5>GROWTH</h5>
+              <h4>Basic plan</h4>
             </div>
             <div class="lonyo-pricing-price">
-              <h2>$39</h2>
-              <span>$45</span>
-            </div>
-            <div class="lonyo-pricing-text">
-              <p>Suitable for team of increasingly skilled people and company</p>
+              <h2>$</h2>
+              <div class="lonyo-price-value dynamic-value" data-active="20" data-monthly="20" data-yearly="40"></div>
+              <p class="dynamic-value" data-active="per user/month" data-monthly="per user/month" data-yearly="per user/per year"></p>
             </div>
             <div class="lonyo-pricing-body">
-              <div class="lonyo-list-icon-content">
-                <ul>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Traditional consulting
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    24/7 Support available
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Tax preparation feature
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    30-Day analysis and Insights
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Data aggregation
-                  </li>
-                </ul>
-              </div>
+              <p>What’s included:</p>
+              <ul>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Unlimited cards and smart controls</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Access to 15+ payment methods</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Automated expense management</li>
+              </ul>
             </div>
-            <div class="lonyo-pricing-footer mt-50">
-              <a href="contact-us.html" class="lonyo-default-btn pill d-block">Choose The Plan</a>
+            <div class="lonyo-pricing-footer extra-mt">
+              <a class="lonyo-default-btn d-block pricing-btn" href="/contact-us">Start your free 14-day trial</a>
             </div>
           </div>
         </div>
         <div class="col-xl-4 col-lg-6">
           <div class="lonyo-pricing-wrap active">
             <div class="lonyo-pricing-header">
-              <h5>STANDARD</h5>
+              <h4>Pro plan</h4>
             </div>
             <div class="lonyo-pricing-price">
-              <h2>$45</h2>
-              <span>$99</span>
-            </div>
-            <div class="lonyo-pricing-text">
-              <p>We aim to develop innovative solutions for managing individuals</p>
+              <h2>$</h2>
+              <div class="lonyo-price-value dynamic-value" data-active="49" data-monthly="49" data-yearly="99"></div>
+              <p class="dynamic-value" data-active="per user/month" data-monthly="per user/month" data-yearly="per user/per year"></p>
             </div>
             <div class="lonyo-pricing-body">
-              <div class="lonyo-list-icon-content">
-                <ul>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Advanced consulting
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    24/7 Support available
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Advanced tax preparation
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    60-Day analysis and Insights
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Data aggregation
-                  </li>
-                </ul>
-              </div>
+              <p>What’s included:</p>
+              <ul>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Everything included in Basic</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Access to 35+ payment methods</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Automated expense management</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Unlimited customizable workflows</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Multi-currency card limits</li>
+              </ul>
             </div>
             <div class="lonyo-pricing-footer mt-50">
-              <a href="contact-us.html" class="lonyo-default-btn pill d-block">Choose The Plan</a>
+              <a class="lonyo-default-btn d-block pricing-btn" href="/contact-us">Get started now</a>
             </div>
           </div>
         </div>
         <div class="col-xl-4 col-lg-6">
-          <div class="lonyo-pricing-wrap light-bg1">
+          <div class="lonyo-pricing-wrap">
             <div class="lonyo-pricing-header">
-              <h5>EXTENDED</h5>
+              <h4>Basic plan</h4>
             </div>
             <div class="lonyo-pricing-price">
-              <h2>$100</h2>
-              <span>$200</span>
-            </div>
-            <div class="lonyo-pricing-text">
-              <p>Offering a premium plan means a higher-level membership</p>
+              <h2>$</h2>
+              <div class="lonyo-price-value dynamic-value" data-active="199" data-monthly="199" data-yearly="399"></div>
+              <p class="dynamic-value" data-active="per user/month" data-monthly="per user/month" data-yearly="per user/per year"></p>
+
             </div>
             <div class="lonyo-pricing-body">
-              <div class="lonyo-list-icon-content">
-                <ul>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Advanced consulting
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    24/7 Support available
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Advanced tax preparation
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Unlimited analysis and Insights
-                  </li>
-                  <li>
-                    <img src="assets/images/about-us/icon1.svg" alt="">
-                    Data aggregation
-                  </li>
-                </ul>
-              </div>
+              <p>What’s included:</p>
+              <ul>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Everything included in Pro</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Access to 100+ payment methods</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Invoice tracking and payments</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Enterprise ERP integrations</li>
+                <li><img src="assets/images/v2/icon7.svg" alt="">Automated reports on cashflow</li>
+              </ul>
             </div>
             <div class="lonyo-pricing-footer mt-50">
-              <a href="contact-us.html" class="lonyo-default-btn pill d-block">Choose The Plan</a>
+              <a class="lonyo-default-btn d-block pricing-btn" href="/contact-us">Get started now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="techin-section-padding4 section" style="background-image: url(assets/images/v1/pricing-bg.png);">
+    <div class="container">
+      <div class="techin-section-title techin-pricing">
+        <div class="row">
+          <div class="col-xl-6 col-lg-8">
+            <div class="techin-title-tag pricing-v1">
+              <span><img src="assets/images/v1/shape2.svg" alt=""></span>
+              <h6>Our Price</h6>
+              <span><img src="assets/images/v1/shape2.svg" alt=""></span>
+            </div>
+            <h2>Choose Our Awesome Pricing Plan</h2>
+          </div>
+          <div class="col-xl-6 col-lg-4 d-flex justify-content-end align-items-center">
+            <div class="techin-title-btn2">
+              <label for="toggle" class="toggle-switch">
+                <input class="toggle-button" id="toggle" type="checkbox" name="toggle">
+                <span>Monthly</span>
+                <span>Yearly</span>
+              </label>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- end section -->
-
-  <div class="lonyo-brand-section2">
-    <div class="lonyo-brand-slider-wrap">
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand1.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand2.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand5.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand2.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand5.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand2.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand5.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand2.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand5.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand4.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand3.svg" alt="">
-      </div>
-      <div class="lonyo-brand-item">
-        <img src="assets/images/brand/brand2.svg" alt="">
+  <div class="techin-pricing-items">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <div class="techin-pricing-wrap" data-aos="fade-up" data-aos-duration="500">
+            <div class="techin-pricing-header">
+              <h4>Basic Plan</h4>
+              <p>Get 20 % Save for Services</p>
+            </div>
+            <div class="techin-pricing-price proAnnuallyPrice">
+              <h5>$49</h5>
+              <span>Per Month</span>
+            </div>
+            <div class="techin-pricing-price proMonthlyPrice">
+              <h5>$89</h5>
+              <span>Per Year</span>
+            </div>
+            <div class="techin-pricing-body">
+              <ul>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Ad Management
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Live Chat
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Multi-Language Content
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Conversational Bots
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Programmable Chatbots
+                </li>
+              </ul>
+              <div class="techin-pricing-shape shape-show">
+                <img src="assets/images/v1/shape-show.png" alt="">
+              </div>
+              <div class="techin-pricing-shape shape-hide">
+                <img src="assets/images/v1/shape-hide.png" alt="">
+              </div>
+            </div>
+            <div class="techin-pricing-footer">
+              <a class="techin-default-btn btn3" data-text="Choose Plan" href="contact-us.html">
+                <span class="button-wraper">Choose Plan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="techin-pricing-wrap pricing-active" data-aos="fade-up" data-aos-duration="700">
+            <div class="techin-pricing-header">
+              <h4>Stander Plan</h4>
+              <p>Get 20 % Save for Services</p>
+            </div>
+            <div class="techin-pricing-price proAnnuallyPrice">
+              <h5>$79</h5>
+              <span>Per Month</span>
+            </div>
+            <div class="techin-pricing-price proMonthlyPrice">
+              <h5>$149</h5>
+              <span>Per Year</span>
+            </div>
+            <div class="techin-pricing-body">
+              <ul>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Ad Management
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Live Chat
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Multi-Language Content
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Conversational Bots
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Programmable Chatbots
+                </li>
+              </ul>
+              <div class="techin-pricing-shape shape-show">
+                <img src="assets/images/v1/shape-show.png" alt="">
+              </div>
+              <div class="techin-pricing-shape shape-hide">
+                <img src="assets/images/v1/shape-hide.png" alt="">
+              </div>
+            </div>
+            <div class="techin-pricing-footer">
+              <a class="techin-default-btn btn3" data-text="Choose Plan" href="contact-us.html">
+                <span class="button-wraper">Choose Plan</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="techin-pricing-wrap mb-0" data-aos="fade-up" data-aos-duration="900">
+            <div class="techin-pricing-header">
+              <h4>Premium Plan</h4>
+              <p>Get 20 % Save for Services</p>
+            </div>
+            <div class="techin-pricing-price proAnnuallyPrice">
+              <h5>$99</h5>
+              <span>Per Month</span>
+            </div>
+            <div class="techin-pricing-price proMonthlyPrice">
+              <h5>$199</h5>
+              <span>Per Year</span>
+            </div>
+            <div class="techin-pricing-body">
+              <ul>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Ad Management
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Live Chat
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Multi-Language Content
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Conversational Bots
+                </li>
+                <li>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 14.75C5.48438 14.75 3.1875 13.4375 1.92969 11.25C0.671875 9.08984 0.671875 6.4375 1.92969 4.25C3.1875 2.08984 5.48438 0.75 8 0.75C10.4883 0.75 12.7852 2.08984 14.043 4.25C15.3008 6.4375 15.3008 9.08984 14.043 11.25C12.7852 13.4375 10.4883 14.75 8 14.75ZM11.0898 6.46484H11.0625C11.3359 6.21875 11.3359 5.80859 11.0625 5.53516C10.8164 5.28906 10.4062 5.28906 10.1602 5.53516L7.125 8.59766L5.83984 7.3125C5.56641 7.03906 5.15625 7.03906 4.91016 7.3125C4.63672 7.55859 4.63672 7.96875 4.91016 8.21484L6.66016 9.96484C6.90625 10.2383 7.31641 10.2383 7.58984 9.96484L11.0898 6.46484Z" fill="#2BC8EB" />
+                  </svg>
+                  Programmable Chatbots
+                </li>
+              </ul>
+              <div class="techin-pricing-shape shape-show">
+                <img src="assets/images/v1/shape-show.png" alt="">
+              </div>
+              <div class="techin-pricing-shape shape-hide">
+                <img src="assets/images/v1/shape-hide.png" alt="">
+              </div>
+            </div>
+            <div class="techin-pricing-footer">
+              <a class="techin-default-btn btn3" data-text="Choose Plan" href="contact-us.html">
+                <span class="button-wraper">Choose Plan</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- end brand -->
+  <!-- end pricing -->
 
-  <section class="lonyo-cta-section section" style="background-image: url(assets/images/cta/thumb1.png);">
+
+  <div class="lonyo-section-padding4 section">
     <div class="container">
-      <div class="lonyo-cta-wrap">
-        <h2>Want to achieve your goals? Let's get started today!</h2>
-        <div class="lonyo-cta-btn-title mt-50">
-          <a href="contact-us.html" class="lonyo-default-btn pill extra-btn2">Get In Touch
-            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.2139 1.5L17.7139 8M17.7139 8L11.2139 14.5M17.7139 8L0.999581 8" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M11.2139 1.5L17.7139 8M17.7139 8L11.2139 14.5M17.7139 8L0.999581 8" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </a>
-          <a href="contact-us.html" class="lonyo-default-btn pill cta-btn3">Have You Any Question</a>
+      <div class="lonyo-section-title center">
+        <h2>Find answers to all questions below</h2>
+      </div>
+      <div class="lonyo-faq-wrap1">
+        <div class="lonyo-faq-item item2 open">
+          <div class="lonyo-faq-header">
+            <h4>Is my financial data safe and secure?</h4>
+            <div class="lonyo-active-icon">
+              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
+              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+            </div>
+          </div>
+          <div class="lonyo-faq-body body2">
+            <p>Yes, this finance apps use bank-level encryption, multi-factor authentication, and other security measures to protect your sensitive information.</p>
+          </div>
+        </div>
+        <div class="lonyo-faq-item item2">
+          <div class="lonyo-faq-header">
+            <h4>Can I link multiple bank accounts and credit cards?</h4>
+            <div class="lonyo-active-icon">
+              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
+              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+            </div>
+          </div>
+          <div class="lonyo-faq-body body2">
+            <p>Yes, this finance apps use bank-level encryption, multi-factor authentication, and other security measures to protect your sensitive information.</p>
+          </div>
+        </div>
+        <div class="lonyo-faq-item item2">
+          <div class="lonyo-faq-header">
+            <h4>How does the app help me stick to my budget?</h4>
+            <div class="lonyo-active-icon">
+              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
+              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+            </div>
+          </div>
+          <div class="lonyo-faq-body body2">
+            <p>Yes, this finance apps use bank-level encryption, multi-factor authentication, and other security measures to protect your sensitive information.</p>
+          </div>
+        </div>
+        <div class="lonyo-faq-item item2">
+          <div class="lonyo-faq-header">
+            <h4>Can I track my investments with the app?</h4>
+            <div class="lonyo-active-icon">
+              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
+              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+            </div>
+          </div>
+          <div class="lonyo-faq-body body2">
+            <p>Yes, this finance apps use bank-level encryption, multi-factor authentication, and other security measures to protect your sensitive information.</p>
+          </div>
+        </div>
+        <div class="lonyo-faq-item item2">
+          <div class="lonyo-faq-header">
+            <h4>Is the app free, or are there subscription fees?</h4>
+            <div class="lonyo-active-icon">
+              <img class="plasicon" src="assets/images/v1/mynus.svg" alt="">
+              <img class="mynusicon" src="assets/images/v1/plas.svg" alt="">
+            </div>
+          </div>
+          <div class="lonyo-faq-body body2">
+            <p>Yes, this finance apps use bank-level encryption, multi-factor authentication, and other security measures to protect your sensitive information.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-btn">
+        <a class="lonyo-default-btn faq-btn2" href="contact-us.html">Can't find your answer, contact us</a>
+      </div>
+    </div>
+  </div>
+  <!-- end faq -->
+
+  <div class="lonyo-content-shape">
+    <img src="assets/images/shape/shape2.svg" alt="">
+  </div>
+  <section class="lonyo-cta-section bg-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="lonyo-cta-thumb">
+            <img src="assets/images/v1/cta-thumb.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="lonyo-default-content lonyo-cta-wrap">
+            <h2>Start a new level of money management</h2>
+            <p>Our finance apps and software are powerful tools for managing personal or business finances, helping users stay organized, track financial health, and make informed decisions.</p>
+            <div class="lonyo-cta-info mt-50">
+              <ul>
+                <li>
+                  <a href="https://www.apple.com/app-store/"><img src="assets/images/v1/app-store.svg" alt=""></a>
+                </li>
+                <li>
+                  <a href="https://playstore.com/"><img src="assets/images/v1/play-store.svg" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- end cta -->
+
+
+
 
   <!-- Footer  -->
 
@@ -694,9 +882,6 @@
 
 
 
-
-
-
   <!-- scripts -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
 
@@ -714,6 +899,7 @@
   <script src="assets/js/tabs-slider.js"></script>
   <script src="assets/js/product-increment.js"></script>
   <script src="assets/js/aos.js"></script>
+  <script src="assets/js/pricing-switcher.js"></script>
   <script src="assets/js/niceselect.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
   <script src="assets/js/slick.js"></script>
