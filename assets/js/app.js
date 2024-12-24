@@ -600,3 +600,26 @@ $('.lonyo-service-vertical-slider2').slick(_defineProperty(_defineProperty(_defi
   autoplay: true,
   autoplaySpeed: 0
 }, "arrows", false), "pauseOnHover", false), "cssEase", 'linear'));
+
+/*--------------------------------------------------------------
+TECHIN TOOGLE PRICING BUTTON JS INIT
+--------------------------------------------------------------*/
+
+$(document).ready(function () {
+  $(".toggle-button").change(function () {
+    toggle(this.checked);
+  });
+
+  // Uncomment this to disaplay monthly on page load
+  toggle(false);
+  function toggle(checked) {
+    $(".toggle-button").prop('checked', checked);
+    if (checked) {
+      $('.coreMonthlyPrice, .proMonthlyPrice').show();
+      $('.coreAnnuallyText, .coreAnnuallyPrice, .proAnnuallyPrice').hide();
+    } else {
+      $('.coreMonthlyPrice,.proMonthlyPrice').hide();
+      $('.coreAnnuallyText,.coreAnnuallyPrice, .proAnnuallyPrice').show();
+    }
+  }
+});

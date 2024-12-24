@@ -326,29 +326,32 @@
   </div>
   <!-- End breadcrumb -->
 
-  <div class="lonyo-section-padding10">
+  <div class="lonyo-section-padding10 position-relative">
     <div class="container">
       <div class="lonyo-section-title center">
         <h2 class="title">Pick from one of our ready packages</h2>
-        <p>Starts at just $20/month, with no ads or hidden fees, after a 14-day free trial. Your card will not be charged until your free trial ends.</p>
-      </div>
-      <div class="pricing-btn">
-        <label>Per Month</label>
-        <div class="toggle-btn">
-          <input class="form-check-input btn-toggle price-deck-trigger" type="checkbox" id="flexSwitchCheckDefault" data-pricing-trigger data-target="#table-price-value" checked>
+        <p class="mb-0">Starts at just $20/month, with no ads or hidden fees, after a 14-day free trial. Your card will not be charged until your free trial ends.</p>
+        <div class="pricing-btn mt-50">
+          <label for="toggle" class="toggle-switch">
+            <input class="toggle-button" id="toggle" type="checkbox" name="toggle" data-checked="coreAnnuallyPrice,coreAnnuallyText" data-not-checked="coreMonthlyPrice,coreMonthlyText">
+            <span>Monthly</span>
+            <span>Yearly</span>
+          </label>
         </div>
-        <label>Per Year</label>
       </div>
-      <div class="row" id="table-price-value" data-pricing-dynamic data-value-active="monthly">
+      <div class="row">
         <div class="col-xl-4 col-lg-6">
           <div class="lonyo-pricing-wrap">
             <div class="lonyo-pricing-header">
               <h4>Basic plan</h4>
             </div>
-            <div class="lonyo-pricing-price">
-              <h2>$</h2>
-              <div class="lonyo-price-value dynamic-value" data-active="20" data-monthly="20" data-yearly="40"></div>
-              <p class="dynamic-value" data-active="per user/month" data-monthly="per user/month" data-yearly="per user/per year"></p>
+            <div class="lonyo-pricing-price proAnnuallyPrice">
+              <h2>$20</h2>
+              <span>/per user/month</span>
+            </div>
+            <div class="lonyo-pricing-price proMonthlyPrice">
+              <h2>$40</h2>
+              <span>/per user/year</span>
             </div>
             <div class="lonyo-pricing-body">
               <p>What’s included:</p>
@@ -368,10 +371,13 @@
             <div class="lonyo-pricing-header">
               <h4>Pro plan</h4>
             </div>
-            <div class="lonyo-pricing-price">
-              <h2>$</h2>
-              <div class="lonyo-price-value dynamic-value" data-active="49" data-monthly="49" data-yearly="99"></div>
-              <p class="dynamic-value" data-active="per user/month" data-monthly="per user/month" data-yearly="per user/per year"></p>
+            <div class="lonyo-pricing-price proAnnuallyPrice">
+              <h2>$49</h2>
+              <span>/per user/month</span>
+            </div>
+            <div class="lonyo-pricing-price proMonthlyPrice">
+              <h2>$99</h2>
+              <span>/per user/year</span>
             </div>
             <div class="lonyo-pricing-body">
               <p>What’s included:</p>
@@ -393,11 +399,13 @@
             <div class="lonyo-pricing-header">
               <h4>Basic plan</h4>
             </div>
-            <div class="lonyo-pricing-price">
-              <h2>$</h2>
-              <div class="lonyo-price-value dynamic-value" data-active="199" data-monthly="199" data-yearly="399"></div>
-              <p class="dynamic-value" data-active="per user/month" data-monthly="per user/month" data-yearly="per user/per year"></p>
-
+            <div class="lonyo-pricing-price proAnnuallyPrice">
+              <h2>$199</h2>
+              <span>/per user/month</span>
+            </div>
+            <div class="lonyo-pricing-price proMonthlyPrice">
+              <h2>$299</h2>
+              <span>/per user/year</span>
             </div>
             <div class="lonyo-pricing-body">
               <p>What’s included:</p>
@@ -416,10 +424,11 @@
         </div>
       </div>
     </div>
+    <div class="pricing-shape"></div>
   </div>
-
-
-
+  <div class="container">
+    <div class="dividead"></div>
+  </div>
 
   <div class="lonyo-section-padding4 section">
     <div class="container">
@@ -685,7 +694,6 @@
   <script src="assets/js/tabs-slider.js"></script>
   <script src="assets/js/product-increment.js"></script>
   <script src="assets/js/aos.js"></script>
-  <script src="assets/js/pricing-switcher.js"></script>
   <script src="assets/js/niceselect.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
   <script src="assets/js/slick.js"></script>
