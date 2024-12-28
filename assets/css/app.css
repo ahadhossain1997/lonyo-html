@@ -330,11 +330,23 @@ h2,
     font-size: 48px;
   }
 }
+@media (max-width: 767px) {
+  h2,
+  .h2 {
+    font-size: 36px;
+  }
+}
 
 h4,
 .h4 {
   font-size: 28px;
   letter-spacing: -0.5px;
+}
+@media (max-width: 767px) {
+  h4,
+  .h4 {
+    font-size: 24px;
+  }
 }
 
 h6,
@@ -2470,6 +2482,11 @@ a.light-color {
     padding: 60px 0 0;
   }
 }
+@media (max-width: 767px) {
+  .lonyo-footer-section.section2 {
+    margin-top: -3px;
+  }
+}
 .lonyo-footer-menu h4 {
   margin-bottom: 24px;
 }
@@ -2669,6 +2686,11 @@ a.light-color {
   left: 0;
 }
 
+@media (max-width: 767px) {
+  .lonyo-content-shape1 {
+    margin-top: -6px;
+  }
+}
 .lonyo-content-shape2 {
   width: 120px;
   height: 120px;
@@ -2682,6 +2704,10 @@ a.light-color {
   .lonyo-content-shape2 {
     display: none;
   }
+}
+.lonyo-content-shape3 {
+  z-index: 0;
+  position: relative;
 }
 
 .lonyo-tab-shape {
@@ -2781,6 +2807,23 @@ a.light-color {
 }
 @media (max-width: 1800px) {
   .lonyo-feature-shape.shape3 {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .lonyo-dasyboard-shape,
+  .lonyo-cta-shape2 {
+    margin-top: -6px;
+  }
+}
+
+.lonyo-brand-shape {
+  position: relative;
+  margin-top: -40px;
+}
+@media (max-width: 1699px) {
+  .lonyo-brand-shape {
     display: none;
   }
 }
@@ -3404,6 +3447,12 @@ a.light-color {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
+@media (max-width: 767px) {
+  .waves.waves2 {
+    left: -30px;
+    top: -30px;
+  }
+}
 
 @keyframes waves {
   0% {
@@ -3899,6 +3948,12 @@ a.light-color {
     padding-bottom: 40px;
   }
 }
+@media (max-width: 767px) {
+  .lonyo-faq-thumb {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
 .lonyo-faq-shape {
   position: relative;
 }
@@ -4000,6 +4055,14 @@ img.plasicon {
   font-size: 70px;
   line-height: 80px;
 }
+.lonyo-pricing-price.price2 {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.lonyo-pricing-price.price2 span {
+  font-weight: 500;
+}
 .lonyo-pricing-body p {
   font-weight: 500;
 }
@@ -4069,6 +4132,65 @@ img.plasicon {
   border-color: transparent;
   padding: 16px 28px;
   color: var(--heading-color);
+}
+
+table {
+  width: 100%;
+  border: 1px solid rgba(20, 45, 111, 0.1019607843);
+  border-radius: 10px;
+}
+
+td, th {
+  padding: 30px;
+  border: 1px solid rgba(20, 45, 111, 0.1019607843);
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+    color: #000;
+    font-weight: bold;
+  }
+}
+.mt-40 {
+  margin-top: 40px;
 }
 
 .lonyo-team-wrap {
@@ -4208,6 +4330,57 @@ img.plasicon {
   height: 45px;
 }
 
+.lonyo-social-wrap ul li {
+  display: inline-block;
+  margin-right: 15px;
+  transition: all 0.4s;
+}
+.lonyo-social-wrap ul li:last-child {
+  margin-right: 0;
+}
+.lonyo-social-wrap ul li a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  justify-content: center;
+  transition: all 0.4s;
+  border: 1px solid var(--heading-color);
+}
+.lonyo-social-wrap ul li a:hover {
+  border: 1px solid transparent;
+  background-color: var(--heading-bg);
+}
+.lonyo-social-wrap ul li a:hover path {
+  fill: var(--white-bg);
+}
+.lonyo-social-wrap2 ul li {
+  display: inline-block;
+  margin-right: 15px;
+  transition: all 0.4s;
+}
+.lonyo-social-wrap2 ul li:last-child {
+  margin-right: 0;
+}
+.lonyo-social-wrap2 ul li a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  justify-content: center;
+  transition: all 0.4s;
+  border: 1px solid var(--white-color);
+}
+.lonyo-social-wrap2 ul li a:hover {
+  border: 1px solid transparent;
+  background-color: var(--white-bg);
+}
+.lonyo-social-wrap2 ul li a:hover path {
+  fill: var(--heading-bg);
+}
+
 .lonyo-blog-wrap {
   padding: 30px;
   border-radius: 10px;
@@ -4249,6 +4422,11 @@ img.plasicon {
 .lonyo-blog-meta ul li:last-child {
   margin-right: 0;
 }
+@media (max-width: 394px) {
+  .lonyo-blog-meta ul li:last-child {
+    margin-top: 10px;
+  }
+}
 .lonyo-blog-meta ul li a {
   font-size: 18px;
   line-height: 25px;
@@ -4256,7 +4434,7 @@ img.plasicon {
 }
 .lonyo-blog-meta ul li a img {
   position: absolute;
-  top: 2px;
+  top: 4px;
   left: 0;
 }
 .lonyo-blog-content {
@@ -4632,8 +4810,11 @@ blockquote::before {
   }
 }
 
-.lonyo-brand-slider-item .slick-slide .slick-cloned {
-  padding: 0 15px;
+.lonyo-brand-slider-item {
+  padding: 0 20px;
+}
+.lonyo-brand-slider-item.ml-10 img {
+  margin-left: 30px;
 }
 
 .lonyo-service-wrap {
@@ -4641,6 +4822,11 @@ blockquote::before {
   padding: 30px;
   margin-bottom: 24px;
   transition: all 0.4s;
+}
+@media (max-width: 767px) {
+  .lonyo-service-wrap {
+    padding: 30px 20px;
+  }
 }
 .lonyo-service-wrap:hover {
   box-shadow: -4px 10px 20px 0px rgba(20, 45, 111, 0.1019607843);
@@ -4841,6 +5027,11 @@ blockquote::before {
     top: 370px;
   }
 }
+@media (max-width: 500px) {
+  .lonyo-service-thumb2 {
+    top: 340px;
+  }
+}
 .lonyo-service-wrap5 {
   padding: 30px 30px 230px 30px;
   border-radius: 10px;
@@ -4901,17 +5092,19 @@ blockquote::before {
   transform: translate(-50%, -50%);
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #FFFFFF 78.6%);
 }
-@media (max-width: 767px) {
+@media (max-width: 1800px) {
   .lonyo-content-thumb::before {
     display: none;
   }
 }
-.lonyo-content-thumb2 {
-  text-align: center;
-}
 @media (max-width: 991px) {
   .lonyo-content-thumb2 {
     padding-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .lonyo-content-thumb2 {
+    padding-bottom: 30px;
   }
 }
 
@@ -4955,15 +5148,8 @@ blockquote::before {
   margin-bottom: -10px;
   border-bottom: 3px solid var(--light-color);
 }
-@media (max-width: 1399px) {
-  .tabs.tab2 {
-    justify-content: center;
-  }
-}
-@media (max-width: 767px) {
-  .tabs.tab2 {
-    justify-content: left;
-  }
+.tabs.tab2 {
+  justify-content: center;
 }
 
 .border-bottom {
@@ -4988,6 +5174,11 @@ blockquote::before {
 }
 .tabs-content.content2 {
   margin-top: 70px;
+}
+@media (max-width: 767px) {
+  .tabs-content.content2 {
+    margin-top: 50px;
+  }
 }
 .tabs-content.content2 li img {
   width: 100%;
@@ -5109,13 +5300,18 @@ blockquote::before {
   text-align: center;
 }
 @media (max-width: 1199px) {
-  .lonyo-rating-wrap.mt-30 {
-    margin-top: 30px;
+  .lonyo-rating-wrap {
+    padding: 20px;
   }
 }
-@media (max-width: 991px) {
-  .lonyo-rating-wrap.mt-31 {
-    margin-top: 30px;
+@media (max-width: 1199px) {
+  .lonyo-rating-wrap .pt-0 {
+    padding-top: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .lonyo-rating-wrap .pt-24 {
+    padding-top: 24px;
   }
 }
 .lonyo-rating-icon {
@@ -5300,7 +5496,7 @@ blockquote::before {
 }
 @media (max-width: 767px) {
   .lonyo-hero-section {
-    padding: 150px 0 100px;
+    padding: 130px 0 100px;
   }
 }
 .lonyo-hero-content {
@@ -5384,7 +5580,7 @@ blockquote::before {
 }
 @media (max-width: 767px) {
   .lonyo-hero-section2 {
-    padding: 150px 0 100px;
+    padding: 130px 0 100px;
   }
 }
 .lonyo-hero-rating {
@@ -5450,17 +5646,17 @@ blockquote::before {
 }
 @media (max-width: 1199px) {
   .lonyo-hero-section3 {
-    padding: 230px 0 500px;
+    padding: 230px 0 480px;
   }
 }
 @media (max-width: 991px) {
   .lonyo-hero-section3 {
-    padding: 190px 0 400px;
+    padding: 190px 0 380px;
   }
 }
 @media (max-width: 767px) {
   .lonyo-hero-section3 {
-    padding: 150px 0 150px;
+    padding: 130px 0 170px;
   }
 }
 .lonyo-hero-content3 {
@@ -5538,17 +5734,17 @@ blockquote::before {
 }
 @media (max-width: 1199px) {
   .lonyo-hero-dashboard3 {
-    margin-top: -500px;
+    margin-top: -460px;
   }
 }
 @media (max-width: 991px) {
   .lonyo-hero-dashboard3 {
-    margin-top: -400px;
+    margin-top: -360px;
   }
 }
 @media (max-width: 767px) {
   .lonyo-hero-dashboard3 {
-    margin-top: -150px;
+    margin-top: -140px;
   }
 }
 
@@ -5646,17 +5842,10 @@ blockquote::before {
     justify-content: center;
   }
 }
-.lonyo-about-us-thumb:hover .lonyo-about-us-card {
-  opacity: 1;
-}
-.lonyo-about-us-thumb:hover .lonyo-about-us-card2 {
-  opacity: 1;
-}
 .lonyo-about-us-card {
   position: absolute;
   bottom: 0;
   left: 0;
-  opacity: 0;
   transition: all 0.4s;
 }
 @media (max-width: 767px) {
@@ -5666,16 +5855,10 @@ blockquote::before {
     transform: translate(-50%, -50%);
   }
 }
-@media (max-width: 525px) {
-  .lonyo-about-us-card {
-    bottom: -90px;
-  }
-}
 .lonyo-about-us-card2 {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  opacity: 0;
   transition: all 0.4s;
 }
 @media (max-width: 1399px) {
@@ -5850,6 +6033,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   border: 1px solid var(--heading-color);
   border-radius: 3px;
   padding: 14px 20px;
+  margin-bottom: 24px;
 }
 @media (max-width: 767px) {
   .lonyo-subscription-field2 input {
@@ -5861,6 +6045,18 @@ textarea::placeholder { /* Most modern browsers support this now. */
   text-align: left;
   font-size: 18px;
   line-height: 25px;
+}
+.lonyo-subscription-field3 input {
+  padding: 14px 20px 14px 20px;
+  border-radius: 3px;
+  transition: all 0.4s;
+  border: 1px solid var(--white-color);
+  margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .lonyo-subscription-field3 input {
+    padding: 18px;
+  }
 }
 
 .lonyo-subscription-field3 input::-webkit-input-placeholder,
@@ -6179,6 +6375,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 @media (max-width: 767px) {
   .lonyo-cta-section {
     padding: 60px 0 0;
+    margin-top: -2px;
   }
 }
 @media (max-width: 991px) {
@@ -6300,6 +6497,12 @@ textarea::placeholder { /* Most modern browsers support this now. */
     padding: 60px 0;
   }
 }
+@media (max-width: 767px) {
+  .lonyo-section-padding.sectionn {
+    margin-top: -2px;
+    z-index: 1;
+  }
+}
 
 .lonyo-section-padding2 {
   padding: 34px 0 106px;
@@ -6332,19 +6535,9 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .lonyo-section-padding4 {
   padding: 0 0 35px;
 }
-@media (max-width: 1600px) {
-  .lonyo-section-padding4 {
-    padding: 0 0 50px;
-  }
-}
 @media (max-width: 991px) {
   .lonyo-section-padding4 {
-    padding: 0 0 35px;
-  }
-}
-@media (max-width: 767px) {
-  .lonyo-section-padding4 {
-    padding: 0 0 10px;
+    padding: 0 0 20px;
   }
 }
 .lonyo-section-padding4.section {
@@ -6470,8 +6663,18 @@ textarea::placeholder { /* Most modern browsers support this now. */
     text-align: center;
   }
 }
+@media (max-width: 767px) {
+  .lonyo-section-title {
+    padding-bottom: 30px;
+  }
+}
 .lonyo-section-title.pb-40 {
   padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .lonyo-section-title.pb-40 {
+    padding-bottom: 30px;
+  }
 }
 .lonyo-section-title .title {
   padding-bottom: 20px;
@@ -6495,6 +6698,9 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 .lonyo-section-title.max600 {
   max-width: 600px;
+}
+.lonyo-section-title .max-w700 {
+  max-width: 700px;
 }
 
 .lonyo-default-content h2 {
@@ -6852,54 +7058,54 @@ textarea::placeholder { /* Most modern browsers support this now. */
     height: 330px;
   }
 }
-.lonyo-default-btn pricing-btn,
-.lonyo-subcribe-btn pricing-btn,
-#lonyo-submit-btn pricing-btn {
+.lonyo-default-btn.pricing-btn,
+.lonyo-subcribe-btn.pricing-btn,
+#lonyo-submit-btn.pricing-btn {
   color: var(--heading-color);
   border: 1px solid var(--body-color);
   background-color: var(--body-color);
 }
-.lonyo-default-btn pricing-btn:hover,
-.lonyo-subcribe-btn pricing-btn:hover,
-#lonyo-submit-btn pricing-btn:hover {
+.lonyo-default-btn.pricing-btn:hover,
+.lonyo-subcribe-btn.pricing-btn:hover,
+#lonyo-submit-btn.pricing-btn:hover {
   color: var(--light-color);
   border: 1px solid var(--heading-color);
 }
-.lonyo-default-btn pricing-btn::after,
-.lonyo-subcribe-btn pricing-btn::after,
-#lonyo-submit-btn pricing-btn::after {
+.lonyo-default-btn.pricing-btn::after,
+.lonyo-subcribe-btn.pricing-btn::after,
+#lonyo-submit-btn.pricing-btn::after {
   width: 350px;
   height: 350px;
   background-color: var(--heading-bg);
 }
 @media (max-width: 1199px) {
-  .lonyo-default-btn pricing-btn::after,
-  .lonyo-subcribe-btn pricing-btn::after,
-  #lonyo-submit-btn pricing-btn::after {
+  .lonyo-default-btn.pricing-btn::after,
+  .lonyo-subcribe-btn.pricing-btn::after,
+  #lonyo-submit-btn.pricing-btn::after {
     width: 400px;
     height: 400px;
   }
 }
 @media (max-width: 991px) {
-  .lonyo-default-btn pricing-btn::after,
-  .lonyo-subcribe-btn pricing-btn::after,
-  #lonyo-submit-btn pricing-btn::after {
+  .lonyo-default-btn.pricing-btn::after,
+  .lonyo-subcribe-btn.pricing-btn::after,
+  #lonyo-submit-btn.pricing-btn::after {
     width: 600px;
     height: 600px;
   }
 }
 @media (max-width: 767px) {
-  .lonyo-default-btn pricing-btn::after,
-  .lonyo-subcribe-btn pricing-btn::after,
-  #lonyo-submit-btn pricing-btn::after {
+  .lonyo-default-btn.pricing-btn::after,
+  .lonyo-subcribe-btn.pricing-btn::after,
+  #lonyo-submit-btn.pricing-btn::after {
     width: 430px;
     height: 430px;
   }
 }
 @media (max-width: 450px) {
-  .lonyo-default-btn pricing-btn::after,
-  .lonyo-subcribe-btn pricing-btn::after,
-  #lonyo-submit-btn pricing-btn::after {
+  .lonyo-default-btn.pricing-btn::after,
+  .lonyo-subcribe-btn.pricing-btn::after,
+  #lonyo-submit-btn.pricing-btn::after {
     width: 330px;
     height: 330px;
   }
@@ -7082,6 +7288,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
 #lonyo-submit-btn.cta-btn:hover {
   border: 1px solid var(--heading-color);
 }
+.lonyo-default-btn.sub-btn::after,
+.lonyo-subcribe-btn.sub-btn::after,
+#lonyo-submit-btn.sub-btn::after {
+  width: 250px;
+}
 @media (max-width: 767px) {
   .lonyo-default-btn.sub-btn::after,
   .lonyo-subcribe-btn.sub-btn::after,
@@ -7094,51 +7305,8 @@ textarea::placeholder { /* Most modern browsers support this now. */
   .lonyo-default-btn.sub-btn::after,
   .lonyo-subcribe-btn.sub-btn::after,
   #lonyo-submit-btn.sub-btn::after {
-    width: 350px;
+    width: 400px;
     height: 350px;
-  }
-}
-.lonyo-default-btn.sub-btn2,
-.lonyo-subcribe-btn.sub-btn2,
-#lonyo-submit-btn.sub-btn2 {
-  position: absolute;
-  top: 4px;
-  right: 5px;
-  padding: 12px 14px;
-  color: var(--light-color);
-}
-@media (max-width: 767px) {
-  .lonyo-default-btn.sub-btn2,
-  .lonyo-subcribe-btn.sub-btn2,
-  #lonyo-submit-btn.sub-btn2 {
-    position: relative;
-    margin-top: 15px;
-    justify-content: center;
-    width: 100%;
-  }
-}
-.lonyo-default-btn.sub-btn2:hover,
-.lonyo-subcribe-btn.sub-btn2:hover,
-#lonyo-submit-btn.sub-btn2:hover {
-  color: var(--heading-color);
-}
-.lonyo-default-btn.sub-btn2::after,
-.lonyo-subcribe-btn.sub-btn2::after,
-#lonyo-submit-btn.sub-btn2::after {
-  width: 200px;
-}
-@media (max-width: 767px) {
-  .lonyo-default-btn.sub-btn2::after,
-  .lonyo-subcribe-btn.sub-btn2::after,
-  #lonyo-submit-btn.sub-btn2::after {
-    width: 500px;
-  }
-}
-@media (max-width: 450px) {
-  .lonyo-default-btn.sub-btn2::after,
-  .lonyo-subcribe-btn.sub-btn2::after,
-  #lonyo-submit-btn.sub-btn2::after {
-    width: 350px;
   }
 }
 .lonyo-default-btn.blog-title-btn,
@@ -7298,7 +7466,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .breadcrumb-wrapper {
   z-index: 0;
   text-align: center;
-  padding: 280px 0 180px;
+  padding: 200px 0 130px;
   position: relative;
   transition: all 0.4s;
 }
@@ -7334,17 +7502,12 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 @media (max-width: 1199px) {
   .breadcrumb-wrapper {
-    padding: 200px 0 130px;
+    padding: 180px 0 100px;
   }
 }
 @media (max-width: 767px) {
   .breadcrumb-wrapper {
-    padding: 150px 0 100px;
-  }
-}
-@media (max-width: 575px) {
-  .breadcrumb-wrapper {
-    padding: 150px 0 80px;
+    padding: 120px 0 80px;
   }
 }
 .breadcrumb-content {
@@ -7650,7 +7813,7 @@ a.lonyo-default-btn.sm-size {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   color: var(--white-color) !important;
-  background-color: var(--accent-bg);
+  background-color: var(--heading-bg);
   z-index: 0;
   overflow: hidden;
   position: relative;
@@ -7728,7 +7891,7 @@ a.lonyo-default-btn.sm-size {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--accent-color);
+  background: var(--heading-bg);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 

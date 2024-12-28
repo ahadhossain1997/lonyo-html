@@ -118,14 +118,30 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var brand_slider = $('.brand-slider-js-init');
     if (brand_slider.is_exist()) {
       brand_slider.slick({
-        slidesToShow: 1,
+        slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 50000,
+        speed: 5000,
         arrows: false,
         pauseOnHover: false,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        responsive: [{
+          breakpoint: 1699,
+          settings: {
+            slidesToShow: 5
+          }
+        }, {
+          breakpoint: 1399,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2
+          }
+        }]
       });
     }
 
