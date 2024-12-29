@@ -2564,7 +2564,7 @@ a.light-color {
 }
 @media (max-width: 767px) {
   .lonyo-footer-bottom-text {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 .lonyo-footer-bottom-text p {
@@ -2582,6 +2582,10 @@ a.light-color {
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
   right: 100px;
   top: 45%;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1800px) {
   .lonyo-footer-shape {
@@ -2596,6 +2600,10 @@ a.light-color {
   border-radius: 100px;
   right: 100px;
   top: 45%;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1800px) {
   .lonyo-footer-shape2 {
@@ -2638,6 +2646,9 @@ a.light-color {
   top: 80px;
   left: 20px;
   z-index: -1;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   transform: translate(-50px, -50px);
 }
 @media (max-width: 991px) {
@@ -2660,6 +2671,9 @@ a.light-color {
   content: "";
   top: 40%;
   right: 100px;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   width: 150px;
   height: 150px;
   border-radius: 100px;
@@ -2684,6 +2698,9 @@ a.light-color {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 
 @media (max-width: 767px) {
@@ -2698,6 +2715,9 @@ a.light-color {
   right: 60px;
   position: absolute;
   border-radius: 100px;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
 @media (max-width: 1800px) {
@@ -2737,6 +2757,9 @@ a.light-color {
   height: 150px;
   bottom: 24%;
   left: 50px;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   transform: rotate(180deg);
   position: absolute;
   border-radius: 100px;
@@ -2772,6 +2795,9 @@ a.light-color {
   bottom: 45px;
   left: 6%;
   position: absolute;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   border-radius: 100px;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
@@ -2821,6 +2847,9 @@ a.light-color {
 .lonyo-brand-shape {
   position: relative;
   margin-top: -40px;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1699px) {
   .lonyo-brand-shape {
@@ -2970,6 +2999,11 @@ a.light-color {
     margin-top: 40px;
   }
 }
+@media (max-width: 767px) {
+  .lonyo-contact-box.box2 {
+    margin-top: 30px;
+  }
+}
 .lonyo-contact-us-map {
   width: 100%;
   height: 750px;
@@ -2978,11 +3012,6 @@ a.light-color {
   .lonyo-contact-us-map {
     height: 400px;
   }
-}
-
-.lonyo-contact-us-map {
-  width: 100%;
-  height: 750px;
 }
 
 .lonyo-career-d-thumb {
@@ -3431,8 +3460,8 @@ a.light-color {
   .waves {
     width: 160px;
     height: 160px;
-    left: -30px;
-    top: -30px;
+    left: -40px;
+    top: -40px;
   }
 }
 .waves.wave-1 {
@@ -3481,6 +3510,9 @@ a.light-color {
   height: 150px;
   border-radius: 100px;
   transform: rotate(180deg);
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
 @media (max-width: 1800px) {
@@ -3741,15 +3773,10 @@ a.light-color {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  padding: 24px;
+  margin: 24px;
 }
 .lonyo-p-thumb.thumb2 {
   padding: 0;
-}
-@media (max-width: 1199px) {
-  .lonyo-p-thumb {
-    padding: 15px;
-  }
 }
 @media (max-width: 991px) {
   .lonyo-p-thumb {
@@ -3761,31 +3788,35 @@ a.light-color {
   transition: all 0.4s;
   object-fit: cover;
 }
+.lonyo-p-thumb img:hover {
+  transform: scale(1.1);
+}
 .lonyo-p-data-wrap {
   display: flex;
   align-items: center;
-  gap: 47px;
   position: absolute;
-  padding: 15px 61px;
+  flex-wrap: wrap;
+  padding: 20px;
   background-color: var(--white-color);
   bottom: 50px;
-  left: 46px;
+  left: 30px;
+  width: 90%;
   border-radius: 10px;
+  justify-content: space-between;
 }
 @media (max-width: 1399px) {
   .lonyo-p-data-wrap {
-    padding: 15px;
+    left: 20px;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .lonyo-p-data-wrap {
-    gap: 0px;
-    left: 22px;
+    bottom: 20px;
+    left: 15px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .lonyo-p-data-wrap {
-    display: block;
     bottom: 30px;
   }
 }
@@ -3796,12 +3827,6 @@ a.light-color {
   .lonyo-p-data-wrap.wrap2 {
     gap: 0;
     left: 15px;
-  }
-}
-@media (max-width: 1199px) {
-  .lonyo-p-data-wrap.wrap2 {
-    gap: 0px;
-    left: 22px;
   }
 }
 @media (max-width: 575px) {
@@ -3818,6 +3843,12 @@ a.light-color {
   display: inline-block;
   padding-left: 20px;
   margin-right: 30px;
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .lonyo-p-content ul li {
+    margin-right: 10px;
+  }
 }
 .lonyo-p-content ul li:last-child {
   margin-bottom: 0;
@@ -3829,8 +3860,11 @@ a.light-color {
   height: 10px;
   border-radius: 100px;
   background-color: var(--heading-bg);
-  top: 10px;
+  top: 8px;
   left: 0;
+}
+.lonyo-p-content ul li a {
+  color: var(--heading-color);
 }
 @media (max-width: 919px) {
   .lonyo-p-title-btn {
@@ -3842,39 +3876,46 @@ a.light-color {
   color: var(--accent-color);
 }
 .lonyo-p-title-btn a img {
-  padding-left: 10px;
+  padding-left: 5px;
 }
 .lonyo-p-d-data-wrap {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
   justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .lonyo-p-d-data-wrap {
+    display: block;
+  }
 }
 .lonyo-p-d-thumb {
   margin-bottom: 24px;
   border-radius: 10px;
 }
+.lonyo-p-d-data-text {
+  text-align: left;
+}
 
-.lonyo-portfolio-menu {
-  text-align: center;
+.lonyo-portfolio-menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .lonyo-portfolio-menu ul li {
-  display: inline-block;
   border: 1px solid var(--heading-color);
   color: var(--heading-color);
   border-radius: 3px;
-  padding: 9px 29px;
+  padding: 16px 26px;
   cursor: pointer;
-  margin-right: 20px;
   font-weight: 500;
 }
 @media (max-width: 767px) {
   .lonyo-portfolio-menu ul li {
     margin-bottom: 24px;
-  }
-}
-@media (max-width: 425px) {
-  .lonyo-portfolio-menu ul li:nth-child(3) {
-    margin-bottom: 0;
   }
 }
 .lonyo-portfolio-menu ul li:last-child {
@@ -3883,7 +3924,7 @@ a.light-color {
 }
 .lonyo-portfolio-menu ul li.active {
   background: var(--body-color);
-  color: var(--white-color);
+  color: var(--heading-color);
   border: 1px solid var(--body-color);
 }
 
@@ -3965,6 +4006,9 @@ a.light-color {
   width: 130px;
   height: 130px;
   border-radius: 100px;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
 @media (max-width: 1800px) {
@@ -4032,6 +4076,13 @@ img.plasicon {
 .lonyo-pricing-header {
   padding-bottom: 24px;
 }
+.lonyo-pricing-header.header2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
 .lonyo-pricing-price {
   gap: 5px;
   display: flex;
@@ -4062,6 +4113,13 @@ img.plasicon {
 }
 .lonyo-pricing-price.price2 span {
   font-weight: 500;
+}
+.lonyo-pricing-price.price2 .pricing-title {
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -2px;
+  text-align: left;
 }
 .lonyo-pricing-body p {
   font-weight: 500;
@@ -4137,19 +4195,38 @@ img.plasicon {
 table {
   width: 100%;
   border: 1px solid rgba(20, 45, 111, 0.1019607843);
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 td, th {
-  padding: 30px;
-  border: 1px solid rgba(20, 45, 111, 0.1019607843);
+  text-align: center;
+  padding: 20px 25px;
+  border-right: 1px solid rgba(20, 45, 111, 0.1019607843);
+}
+td span, th span {
+  font-size: 18px;
+  line-height: 26px;
 }
 
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
+.pricing-author {
+  text-align: left;
+}
+
+.table-sub-title {
+  background-color: var(--light-color);
+}
+.table-sub-title th {
+  border-right: 1px solid var(--light-color);
+  padding: 30px;
+  text-align: left;
+}
+.table-sub-title th span {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+}
+
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
   table {
     width: 100%;
@@ -4197,10 +4274,15 @@ and also iPads specifically.
   border-radius: 10px;
   transition: all 0.4s;
   margin-bottom: 24px;
-  margin-bottom: 24px;
 }
 .lonyo-team-wrap:hover .lonyo-team-thumb img {
   transform: scale(1.1);
+}
+.lonyo-team-wrap:hover .lonyo-team-content a h6::before {
+  width: 40%;
+}
+.lonyo-team-wrap:hover .lonyo-team-content2 a h6::before {
+  width: 40%;
 }
 .lonyo-team-thumb {
   position: relative;
@@ -4221,10 +4303,21 @@ and also iPads specifically.
 .lonyo-team-content h6 {
   font-weight: 500;
   color: var(--light-color);
+  position: relative;
+}
+.lonyo-team-content h6::before {
+  content: " ";
+  left: 90px;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.4s;
+  background: var(--white-color);
 }
 .lonyo-team-content p {
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 18px;
   line-height: 25px;
   color: var(--light-color);
@@ -4235,6 +4328,17 @@ and also iPads specifically.
 }
 .lonyo-team-content2 h6 {
   font-weight: 500;
+  position: relative;
+}
+.lonyo-team-content2 h6::before {
+  content: " ";
+  left: 90px;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.4s;
+  background: var(--heading-color);
 }
 .lonyo-team-content2 p {
   margin-bottom: 0;
@@ -4295,11 +4399,21 @@ and also iPads specifically.
 .team-btn {
   text-align: center;
 }
+@media (max-width: 767px) {
+  .team-btn {
+    margin-top: 0 !important;
+  }
+}
 
 .tag-share-social {
   display: flex;
   gap: 24px;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .tag-share-social {
+    padding-top: 24px;
+  }
 }
 .tag-share-social ul {
   display: flex;
@@ -4395,7 +4509,7 @@ and also iPads specifically.
 .lonyo-blog-wrap:hover .lonyo-blog-thumb img {
   transform: scale(1.1);
 }
-.lonyo-blog-wrap:hover .lonyo-blog-content h4 {
+.lonyo-blog-wrap:hover .lonyo-blog-content h2 {
   background-size: 100% 1px;
 }
 .lonyo-blog-thumb {
@@ -4443,7 +4557,7 @@ and also iPads specifically.
 .lonyo-blog-content a {
   color: var(--heading-color);
 }
-.lonyo-blog-content h4 {
+.lonyo-blog-content h2 {
   padding-top: 0;
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
@@ -4451,6 +4565,9 @@ and also iPads specifically.
   background-size: 0 1px;
   transition: background-size 0.3s ease-in-out;
   display: inline;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.5px;
 }
 .lonyo-blog-content p {
   margin-top: 15px;
@@ -4631,6 +4748,7 @@ and also iPads specifically.
 @media (max-width: 767px) {
   .lonyo-blog-d-content-wrap {
     margin: 30px 0;
+    display: block;
   }
 }
 .lonyo-blog-d-comment-box h4 {
@@ -5252,6 +5370,9 @@ blockquote::before {
   height: 150px;
   content: "";
   position: absolute;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   border-radius: 100px;
   background: linear-gradient(48.01deg, #A3BDFF -82.43%, #142D6F 89.75%);
 }
@@ -5414,12 +5535,6 @@ blockquote::before {
   gap: 30px;
   justify-content: center;
 }
-.lonyo-integration-d-title ul li {
-  display: grid;
-}
-.lonyo-integration-d-title ul li span {
-  transform: rotate(180deg);
-}
 
 .dividead {
   border-top: 1px solid rgba(20, 45, 111, 0.1019607843);
@@ -5540,6 +5655,10 @@ blockquote::before {
   right: -130px;
   width: 150px;
   height: 150px;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   border-radius: 100px;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
@@ -5556,6 +5675,10 @@ blockquote::before {
   width: 90px;
   height: 90px;
   border-radius: 100px;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 4s ease-in-out infinite;
+  animation: updown 4s ease-in-out infinite;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
 @media (max-width: 1560px) {
@@ -5675,6 +5798,9 @@ blockquote::before {
   position: absolute;
   background: linear-gradient(47.56deg, #a3bdff -40.67%, #f6f4ef 78.6%);
   transform: rotate(130deg);
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1800px) {
   .lonyo-hero-content3::before {
@@ -5691,6 +5817,9 @@ blockquote::before {
   position: absolute;
   background: linear-gradient(47.56deg, #a3bdff -40.67%, #f6f4ef 78.6%);
   transform: rotate(130deg);
+  transform: translatey(0);
+  -webkit-animation: updown 2s ease-in-out infinite;
+  animation: updown 2s ease-in-out infinite;
 }
 @media (max-width: 1800px) {
   .lonyo-hero-content3::after {
@@ -5855,6 +5984,11 @@ blockquote::before {
     transform: translate(-50%, -50%);
   }
 }
+@media (max-width: 490px) {
+  .lonyo-about-us-card {
+    bottom: -50px;
+  }
+}
 .lonyo-about-us-card2 {
   position: absolute;
   bottom: 20px;
@@ -5906,6 +6040,17 @@ blockquote::before {
   max-width: 616px;
 }
 
+@keyframes updown {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 input[type=text],
 input[type=email],
 input[type=password],
@@ -6410,6 +6555,10 @@ textarea::placeholder { /* Most modern browsers support this now. */
   height: 130px;
   border-radius: 100px;
   transform: rotate(110deg);
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #142D6F 78.6%);
 }
 @media (max-width: 1800px) {
@@ -6470,12 +6619,15 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .lonyo-cta-section2::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 110px;
+  left: 10%;
   width: 200px;
   height: 200px;
   border-radius: 100px;
   transform: rotate(180deg);
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
 @media (max-width: 1800px) {
@@ -6560,6 +6712,9 @@ textarea::placeholder { /* Most modern browsers support this now. */
   top: 24%;
   left: 80px;
   content: "";
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   position: absolute;
   border-radius: 100px;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
@@ -6624,6 +6779,32 @@ textarea::placeholder { /* Most modern browsers support this now. */
   border-radius: 100px;
   transform: rotate(145deg);
   background: linear-gradient(47.56deg, #a3bdff -40.67%, #f6f4ef 78.6%);
+}
+@media (max-width: 1800px) {
+  .lonyo-section-padding7.section::before {
+    display: none;
+  }
+}
+.lonyo-section-padding7.section2 {
+  position: relative;
+}
+.lonyo-section-padding7.section2::before {
+  width: 130px;
+  height: 130px;
+  top: 50%;
+  right: 80px;
+  content: "";
+  position: absolute;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
+  border-radius: 100px;
+  background: linear-gradient(47.56deg, #a3bdff -40.67%, #f6f4ef 78.6%);
+}
+@media (max-width: 1800px) {
+  .lonyo-section-padding7.section2::before {
+    display: none;
+  }
 }
 
 .lonyo-section-padding9 {
@@ -6787,16 +6968,16 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 @media (max-width: 991px) {
   .lonyo-default-content.border-b {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     border-bottom: 1px solid rgba(20, 45, 111, 0.1019607843);
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 767px) {
   .lonyo-default-content.border-b {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     border-bottom: 1px solid rgba(20, 45, 111, 0.1019607843);
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 .lonyo-default-content .text4 p {
@@ -6805,6 +6986,10 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 .lonyo-default-content .text4 ul li {
   font-weight: 500;
+}
+.lonyo-default-content.feature-wrap {
+  position: sticky;
+  top: 110px;
 }
 
 .pb-60 {
@@ -7463,6 +7648,15 @@ textarea::placeholder { /* Most modern browsers support this now. */
   }
 }
 
+.pt-40 {
+  padding-top: 40px;
+}
+@media (max-width: 767px) {
+  .pt-40 {
+    padding-top: 30px;
+  }
+}
+
 .breadcrumb-wrapper {
   z-index: 0;
   text-align: center;
@@ -7477,6 +7671,9 @@ textarea::placeholder { /* Most modern browsers support this now. */
   height: 200px;
   bottom: 200px;
   right: 50px;
+  transform: translatey(0);
+  -webkit-animation: updown 2s ease-in-out infinite;
+  animation: updown 2s ease-in-out infinite;
   border-radius: 100px;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
@@ -7490,8 +7687,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
   position: absolute;
   width: 90px;
   height: 90px;
-  top: 100px;
+  top: 115px;
   left: 50px;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   border-radius: 100px;
   background: linear-gradient(47.56deg, #A3BDFF -40.67%, #F6F4EF 78.6%);
 }
@@ -7605,7 +7805,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   background: var(--white-color);
   border-radius: 100px;
   transition: all 0.4s;
-  border: 1px solid rgba(0, 26, 61, 0.1019607843);
+  border: 1px solid var(--heading-color);
 }
 @media (max-width: 575px) {
   .lonyo-pagination span,
@@ -7619,8 +7819,8 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .lonyo-pagination a:hover,
 .pagi-btn:hover {
   color: var(--white-color);
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  background-color: var(--heading-color);
+  border: 1px solid var(--heading-color);
 }
 .lonyo-pagination span:hover path,
 .lonyo-pagination a:hover path,
@@ -7636,8 +7836,8 @@ textarea::placeholder { /* Most modern browsers support this now. */
 a.current {
   cursor: not-allowed;
   color: var(--white-color);
-  background-color: var(--accent-bg);
-  border: 1px solid var(--accent-bg);
+  background-color: var(--heading-bg);
+  border: 1px solid var(--heading-bg);
 }
 
 .lonyo-menu-wrapper {
@@ -7907,7 +8107,7 @@ a.lonyo-default-btn.sm-size {
 
 .lonyo-preloader div:nth-child(3) {
   left: 32px;
-  animation: lonyo-preloader2 0.6s infinite;
+  animation: lonyo-preloader3 0.6s infinite;
 }
 
 .lonyo-preloader div:nth-child(4) {

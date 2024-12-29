@@ -592,7 +592,7 @@ $(function () {
 });
 
 // vertical slider
-$('.lonyo-service-vertical-slider').slick(_defineProperty(_defineProperty(_defineProperty({
+$('.lonyo-service-vertical-slider').slick({
   dots: false,
   speed: 5000,
   slidesToShow: 2,
@@ -602,8 +602,12 @@ $('.lonyo-service-vertical-slider').slick(_defineProperty(_defineProperty(_defin
   focusOnSelect: true,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 0
-}, "arrows", false), "pauseOnHover", false), "cssEase", 'linear'));
+  autoplaySpeed: 0,
+  pauseOnHover: false,
+  cssEase: 'linear',
+  verticalSwiping: true,
+  slidedown: true
+});
 $('.lonyo-service-vertical-slider2').slick(_defineProperty(_defineProperty(_defineProperty({
   dots: false,
   speed: 5000,
