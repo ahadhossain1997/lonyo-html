@@ -605,8 +605,7 @@ $('.lonyo-service-vertical-slider').slick({
   autoplaySpeed: 0,
   pauseOnHover: false,
   cssEase: 'linear',
-  verticalSwiping: true,
-  slidedown: true
+  verticalSwiping: true
 });
 $('.lonyo-service-vertical-slider2').slick(_defineProperty(_defineProperty(_defineProperty({
   dots: false,

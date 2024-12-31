@@ -3520,10 +3520,25 @@ a.light-color {
     display: none;
   }
 }
+.lonyo-t-wrapper2 {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+.lonyo-t-wrapper3 {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
 .lonyo-t-wrap {
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 24px;
+  animation: marquee 15s linear infinite;
 }
 .lonyo-t-wrap.wrap2 {
   white-space: wrap;
@@ -3574,6 +3589,34 @@ a.light-color {
 
 .lonyo-slider-icon-data2.slick-initialized.slick-slider {
   direction: rtl;
+}
+
+/* Make it move! */
+@keyframes marquee {
+  100% {
+    top: 8em;
+  }
+  0% {
+    top: -11em;
+  }
+}
+@keyframes marqueebottom {
+  0% {
+    top: 8em;
+  }
+  100% {
+    top: -11em;
+  }
+}
+.marqueebottom {
+  position: relative;
+  animation: marqueebottom 15s linear infinite;
+  overflow: hidden;
+}
+
+.marquee {
+  position: relative;
+  animation: marquee 15s linear infinite;
 }
 
 .lonyo-counter-wrap {
@@ -4203,6 +4246,11 @@ td, th {
   padding: 20px 25px;
   border-right: 1px solid rgba(20, 45, 111, 0.1019607843);
 }
+@media (max-width: 1280px) {
+  td, th {
+    padding: 15px 0;
+  }
+}
 td span, th span {
   font-size: 18px;
   line-height: 26px;
@@ -4211,14 +4259,31 @@ td span, th span {
 .pricing-author {
   text-align: left;
 }
+@media (max-width: 1260px) {
+  .pricing-author {
+    text-align: center;
+  }
+}
 
 .table-sub-title {
   background-color: var(--light-color);
+}
+@media (max-width: 1260px) {
+  .table-sub-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .table-sub-title th {
   border-right: 1px solid var(--light-color);
   padding: 30px;
   text-align: left;
+}
+@media (max-width: 1260px) {
+  .table-sub-title th {
+    padding: 20px 0;
+  }
 }
 .table-sub-title th span {
   font-size: 28px;
@@ -4227,7 +4292,7 @@ td span, th span {
   letter-spacing: -0.5px;
 }
 
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (max-width: 1260px), (min-device-width: 768px) and (max-device-width: 1024px) {
   table {
     width: 100%;
   }
@@ -4255,8 +4320,8 @@ td span, th span {
     /* Now like a table header */
     position: absolute;
     /* Top/left values mimic padding */
-    top: 6px;
-    left: 6px;
+    top: 15px;
+    left: 0px;
     width: 45%;
     padding-right: 10px;
     white-space: nowrap;
@@ -5509,8 +5574,8 @@ blockquote::before {
   font-weight: 500;
   color: var(--heading-color);
 }
-.lonyo-integration-content a img {
-  padding-left: 5px;
+.lonyo-integration-content a svg {
+  margin-top: 5px;
 }
 .lonyo-integration-d-wrap {
   max-width: 1050px;
@@ -6776,6 +6841,9 @@ textarea::placeholder { /* Most modern browsers support this now. */
   left: 80px;
   content: "";
   position: absolute;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
   border-radius: 100px;
   transform: rotate(145deg);
   background: linear-gradient(47.56deg, #a3bdff -40.67%, #f6f4ef 78.6%);
@@ -7655,6 +7723,81 @@ textarea::placeholder { /* Most modern browsers support this now. */
   .pt-40 {
     padding-top: 30px;
   }
+}
+
+.title-btn svg {
+  transition: all 0.3s ease-out 0s;
+  margin-left: 5px;
+}
+
+.title-btn:hover svg path:nth-of-type(1), .title-btn:focus-visible svg path:nth-of-type(1) {
+  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+  opacity: 0;
+  transition-delay: 0s, 0s;
+}
+
+.title-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.title-btn svg path {
+  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
+}
+
+.title-btn:hover svg path:nth-of-type(2), .title-btn:focus-visible svg path:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.title-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.title-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.title-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.title-btn {
+  user-select: none;
+  -moz-user-select: none;
+  background: var(--white-bg) none repeat scroll 0 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  vertical-align: middle;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 50px;
+  --arrow-hover-move-x: -110%;
+  gap: 10px;
+  z-index: 1;
+  position: relative;
+  border: none;
 }
 
 .breadcrumb-wrapper {
