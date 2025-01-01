@@ -49,7 +49,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     /*--------------------------------------------------------------
     LONYO PRELOADER JS INIT
     --------------------------------------------------------------*/
-    $(".lonyo-preloader-wrap").fadeOut(500);
+    // $(".lonyo-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
     LONYO STICKY MENU JS INIT
@@ -413,8 +413,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
   $(window).on("resize", function () {}); // end window resize
 
-  $(window).on('load', function () {}); // End window LODE
-
   /*--------------------------------------------------------------
   LONYO MAP JS INIT
   ------------------------------------------------------------*/
@@ -714,3 +712,33 @@ $(".toggle-password2").click(function () {
     input.attr("type", "password");
   }
 });
+
+/*===========================================
+    =    On Load Function      =
+=============================================*/
+$(window).on("load", function () {
+  preloader();
+  wowAnimation();
+});
+
+/*===========================================
+    =    Preloader      =
+=============================================*/
+function preloader() {
+  $('.preloader').delay(0).fadeOut();
+}
+;
+
+/*===========================================
+    =        Wow Active         =
+=============================================*/
+function wowAnimation() {
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: false,
+    live: true
+  });
+  wow.init();
+}
