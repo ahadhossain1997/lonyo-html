@@ -4274,7 +4274,7 @@ td, th {
 }
 @media (max-width: 1280px) {
   td, th {
-    padding: 15px 0;
+    padding: 20px;
   }
 }
 td span, th span {
@@ -4285,21 +4285,15 @@ td span, th span {
 .pricing-author {
   text-align: left;
 }
-@media (max-width: 1260px) {
-  .pricing-author {
-    text-align: center;
+
+@media (max-width: 1349px) {
+  .lonyo-pricing-table {
+    overflow-x: auto;
   }
 }
 
 .table-sub-title {
   background-color: var(--light-color);
-}
-@media (max-width: 1260px) {
-  .table-sub-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 .table-sub-title th {
   border-right: 1px solid var(--light-color);
@@ -4308,7 +4302,7 @@ td span, th span {
 }
 @media (max-width: 1260px) {
   .table-sub-title th {
-    padding: 20px 0;
+    padding: 20px;
   }
 }
 .table-sub-title th span {
@@ -4318,45 +4312,6 @@ td span, th span {
   letter-spacing: -0.5px;
 }
 
-@media only screen and (max-width: 1260px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  table {
-    width: 100%;
-  }
-  /* Force table to not be like tables anymore */
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-  /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  tr {
-    border: 1px solid #ccc;
-  }
-  td {
-    /* Behave  like a "row" */
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-  }
-  td:before {
-    /* Now like a table header */
-    position: absolute;
-    /* Top/left values mimic padding */
-    top: 15px;
-    left: 0px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    /* Label the data */
-    content: attr(data-column);
-    color: #000;
-    font-weight: bold;
-  }
-}
 .mt-40 {
   margin-top: 40px;
 }
