@@ -17,21 +17,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   /*--------------------------------------------------------------
    [Table of contents]
   
-  lonyo PRELOADER JS INIT
-  lonyo HEADER SEARCH JS INIT
-  lonyo STICKY MENU JS INIT
-  lonyo MENU SIDEBAR JS INIT
-  lonyo PROGRES CIRCLE JS INIT
-  lonyo BRAND SLIDER INIT
-  lonyo MAGNIFIC PUPOP JS INIT
-  lonyo COUNTER JS INIT
-  lonyo THREE COLUMN SLIDER JS INIT
-  lonyo TSTIMONIAL SLIDER INIT
-  lonyo SKILLBAR JS INIT
-  lonyo TOOGLE BUTTON JS INIT
-  lonyo CURRENT YEAR JS INIT
-  lonyo AOS ANIMATION JS INIT
-  lonyo MAP JS INIT
+  LONYO PRELOADER JS INIT
+  LONYO HEADER TRIGER JS INIT
+  LONYO STICKY MENU JS INIT
+  LONYO MENU SIDEBAR JS INIT
+  LONYO PROGRES CIRCLE JS INIT
+  LONYO MAGNIFIC PUPOP JS INIT
+  LONYO BRAND SLIDER INIT
+  LONYO COUNTER JS INIT
+  LONYO TSTIMONIAL SLIDER INIT
+  LONYO SKILLBAR JS INIT
+  LONYO CURRENT YEAR JS INIT
+  LONYO AOS ANIMATION JS INIT
+  LONYO MAP JS INIT
+  LONYO VERTICAL SLIDER JS INIT
+  LONYO TOOGLE BUTTON JS INIT
+  LONYO PORTFOLIO MASONAY FILTER JS
+  LONYO TOGGLE PASSOWRD JS INIT
+  
+  
   -------------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
@@ -43,12 +47,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   };
   $(function () {
     /*--------------------------------------------------------------
-    lonyo PRELOADER JS INIT
+    LONYO PRELOADER JS INIT
     --------------------------------------------------------------*/
     $(".lonyo-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    lonyo STICKY MENU JS INIT
+    LONYO STICKY MENU JS INIT
     --------------------------------------------------------------*/
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 50) {
@@ -59,7 +63,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    lonyo MENU SIDEBAR JS INIT
+    LONYO MENU SIDEBAR JS INIT
     --------------------------------------------------------------*/
     $(".lonyo-header-triger").on("click", function (e) {
       $(".lonyo-sidemenu-column, .offcanvas-overlay").addClass("active");
@@ -70,7 +74,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    lonyo PROGRES CIRCLE JS INIT
+    LONYO PROGRES CIRCLE JS INIT
     --------------------------------------------------------------*/
 
     var progressPath = document.querySelector('.progress-wrap path');
@@ -106,7 +110,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    lonyo MAGNIFIC PUPOP JS INIT
+    LONYO MAGNIFIC PUPOP JS INIT
     --------------------------------------------------------------*/
     var popup_youtube = $('.video-init');
     if (popup_youtube.is_exist()) {
@@ -115,6 +119,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         mainClass: 'mfp-fade'
       });
     }
+
+    /*--------------------------------------------------------------
+    LONYO BRAND SLIDER INIT
+    --------------------------------------------------------------*/
     var brand_slider = $('.brand-slider-js-init');
     if (brand_slider.is_exist()) {
       brand_slider.slick({
@@ -146,7 +154,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
 
     /*--------------------------------------------------------------
-    lonyo COUNTER JS INIT
+    LONYO COUNTER JS INIT
     --------------------------------------------------------------*/
 
     var stats = document.querySelectorAll(".lonyo-counter-data");
@@ -218,7 +226,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    lonyo  TESTIMONIAL SLIDER JS INIT
+    LONYO  TESTIMONIAL SLIDER JS INIT
     --------------------------------------------------------------*/
     var t_slider = $('.lonyo-testimonial-slider-init');
     if (t_slider.is_exist()) {
@@ -323,45 +331,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }]
       });
     }
-    /*--------------------------------------------------------------
-    lonyo  TEAM SLIDER JS INIT
-    --------------------------------------------------------------*/
-
-    var team_slider = $('.lonyo-team-slider');
-    if (team_slider.is_exist()) {
-      team_slider.slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        speed: 200,
-        dots: true,
-        responsive: [{
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 1399,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 1
-          }
-        }]
-      });
-    }
 
     /*--------------------------------------------------------------
-    lonyo SKILLBAR JS INIT
+    LONYO SKILLBAR JS INIT
     --------------------------------------------------------------*/
 
     (function ($) {
@@ -424,14 +396,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     })(jQuery);
 
     /*--------------------------------------------------------------
-    lonyo CURRENT YEAR JS INIT
+    LONYO CURRENT YEAR JS INIT
     --------------------------------------------------------------*/
 
     var currentYear = new Date().getFullYear();
     $('#current-year').text(currentYear);
 
     /*--------------------------------------------------------------
-    lonyo AOS ANIMATION JS INIT
+    LONYO AOS ANIMATION JS INIT
     --------------------------------------------------------------*/
 
     AOS.init({
@@ -444,7 +416,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   $(window).on('load', function () {}); // End window LODE
 
   /*--------------------------------------------------------------
-  lonyo MAP JS
+  LONYO MAP JS INIT
   ------------------------------------------------------------*/
   var google_map = $('#map');
   if (google_map.is_exist()) {
@@ -591,7 +563,10 @@ $(function () {
   });
 });
 
-// vertical slider
+/*--------------------------------------------------------------
+LONYO VERTICAL SLIDER JS INIT
+------------------------------------------------------------*/
+
 $('.lonyo-service-vertical-slider').slick({
   dots: false,
   speed: 5000,
@@ -621,7 +596,7 @@ $('.lonyo-service-vertical-slider2').slick(_defineProperty(_defineProperty(_defi
 }, "arrows", false), "pauseOnHover", false), "cssEase", 'linear'));
 
 /*--------------------------------------------------------------
-TECHIN TOOGLE PRICING BUTTON JS INIT
+TECHIN TOOGLE BUTTON JS INIT
 --------------------------------------------------------------*/
 
 $(document).ready(function () {
@@ -644,7 +619,7 @@ $(document).ready(function () {
 });
 
 /*--------------------------------------------------------------
-LONYO PORTFOLIO MASONAY FILTER JS
+LONYO PORTFOLIO MASONAY FILTER JS INIT
 ------------------------------------------------------------*/
 
 var lonyo_filter_gallery = $('#lonyo-portfolio-grid');
@@ -717,7 +692,9 @@ if (lonyo_filter_gallery.is_exist()) {
   });
 }
 
-// toggle password
+/*--------------------------------------------------------------
+LONYO TOGGLE PASSOWRD JS INIT
+------------------------------------------------------------*/
 
 $(".toggle-password").click(function () {
   $(this).toggleClass("fa-eye fa-eye-slash");
@@ -728,8 +705,6 @@ $(".toggle-password").click(function () {
     input.attr("type", "password");
   }
 });
-// toggle password
-
 $(".toggle-password2").click(function () {
   $(this).toggleClass("fa-eye fa-eye-slash");
   var input = $($(this).attr("toggle"));

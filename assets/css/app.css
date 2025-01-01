@@ -3551,9 +3551,14 @@ a.light-color {
 }
 .lonyo-t-overlay {
   position: absolute;
-  bottom: 0;
+  top: 160px;
   left: 0;
   z-index: 1;
+}
+@media (max-width: 1800px) {
+  .lonyo-t-overlay {
+    display: none;
+  }
 }
 .lonyo-t-overlay2 {
   position: absolute;
@@ -3610,13 +3615,13 @@ a.light-color {
 }
 .marqueebottom {
   position: relative;
-  animation: marqueebottom 15s linear infinite;
+  animation: marqueebottom 10s linear infinite;
   overflow: hidden;
 }
 
 .marquee {
   position: relative;
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .lonyo-counter-wrap {
@@ -3978,9 +3983,14 @@ a.light-color {
 .lonyo-faq-title {
   padding-bottom: 60px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .lonyo-faq-title {
     padding-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .lonyo-faq-title {
+    padding-bottom: 30px;
   }
 }
 .lonyo-faq-item {
@@ -4380,6 +4390,11 @@ td span, th span {
   transition: all 0.4s;
   background: var(--white-color);
 }
+@media (max-width: 767px) {
+  .lonyo-team-content h6::before {
+    display: none;
+  }
+}
 .lonyo-team-content p {
   margin-bottom: 0;
   margin-top: 10px;
@@ -4404,6 +4419,11 @@ td span, th span {
   position: absolute;
   transition: all 0.4s;
   background: var(--heading-color);
+}
+@media (max-width: 767px) {
+  .lonyo-team-content2 h6::before {
+    display: none;
+  }
 }
 .lonyo-team-content2 p {
   margin-bottom: 0;
@@ -5190,29 +5210,14 @@ blockquote::before {
 }
 @media (max-width: 1399px) {
   .lonyo-service-thumb2 {
-    top: 400px;
-    left: 50%;
+    top: 250px;
+    left: 25%;
     transform: translate(-50%, -50%);
-  }
-}
-@media (max-width: 1199px) {
-  .lonyo-service-thumb2 {
-    top: 370px;
-  }
-}
-@media (max-width: 991px) {
-  .lonyo-service-thumb2 {
-    top: 420px;
   }
 }
 @media (max-width: 767px) {
   .lonyo-service-thumb2 {
-    top: 370px;
-  }
-}
-@media (max-width: 500px) {
-  .lonyo-service-thumb2 {
-    top: 340px;
+    left: 21%;
   }
 }
 .lonyo-service-wrap5 {
@@ -6352,7 +6357,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 .lonyo-main-field input {
   background-color: var(--white-bg);
-  padding: 18px 30px;
+  padding: 20px 60px 20px 30px;
   margin-bottom: 24px;
   font-size: 18px;
   font-weight: 400;
@@ -6965,6 +6970,9 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 .lonyo-default-content.pb-35 p {
   margin-bottom: 30px;
+}
+.lonyo-default-content.pb-35 p:last-child {
+  margin-bottom: 0;
 }
 .lonyo-default-content.pb-35 ul li {
   position: relative;
