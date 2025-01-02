@@ -6700,11 +6700,6 @@ textarea::placeholder { /* Most modern browsers support this now. */
   }
 }
 
-.lonyo-cta-shape2 {
-  overflow: hidden;
-  display: none;
-}
-
 .lonyo-section-padding {
   padding: 130px 0;
   overflow: hidden;
