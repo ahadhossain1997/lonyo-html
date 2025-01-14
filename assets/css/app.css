@@ -2235,7 +2235,7 @@ a.lonyo-header-info img {
   text-align: left;
   visibility: hidden;
   min-width: 220px;
-  border-radius: 0 0 6px 6px;
+  border-radius: 6px;
 }
 .main-menu ul.sub-menu li {
   padding: 5px 10px 5px 20px;
@@ -2286,7 +2286,7 @@ a.lonyo-header-info img {
   top: 0;
   margin: 0 0;
   margin-left: 20px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 .main-menu ul.sub-menu li ul.sub-menu li ul {
   left: 100%;
@@ -2349,6 +2349,10 @@ a.light-color {
     width: 100%;
   }
 }
+.main-menu ul li.menu-item-has-children > a:after {
+  right: 0;
+}
+
 .site-header .lonyo-menu-toggle {
   display: flex;
   height: 30px;
@@ -4130,7 +4134,7 @@ img.plasicon {
 .lonyo-pricing-wrap {
   padding: 30px;
   border-radius: 10px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   margin-bottom: 24px;
   background-color: var(--white-bg);
   border: 1px solid rgba(20, 45, 111, 0.1019607843);
@@ -4556,7 +4560,7 @@ td span, th span {
   padding: 30px;
   border-radius: 10px;
   margin-bottom: 24px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   border: 1px solid rgba(20, 45, 111, 0.1019607843);
 }
 .lonyo-blog-wrap:hover {
@@ -4579,7 +4583,7 @@ td span, th span {
   width: 100%;
   height: 200%;
   object-fit: cover;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
 }
 .lonyo-blog-meta {
   padding-bottom: 24px;
@@ -4709,13 +4713,13 @@ td span, th span {
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
 }
 .lonyo-blog-recent-post-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
 }
 .lonyo-blog-recent-post-data ul li {
   font-size: 18px;
@@ -5000,7 +5004,7 @@ blockquote::before {
   border-radius: 10px;
   padding: 30px;
   margin-bottom: 24px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
 }
 @media (max-width: 767px) {
   .lonyo-service-wrap {
@@ -5276,7 +5280,7 @@ blockquote::before {
   display: flex;
   align-items: center;
   gap: 50px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   flex-wrap: wrap;
 }
 @media (max-width: 991px) {
@@ -5291,7 +5295,7 @@ blockquote::before {
   height: 3px;
   position: absolute;
   border-radius: 3px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   margin-bottom: -10px;
   border-bottom: 3px solid var(--light-color2);
 }
@@ -5331,7 +5335,7 @@ blockquote::before {
 
 .tabs-content {
   margin-top: 30px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
 }
 .tabs-content li {
   display: none;
@@ -5351,7 +5355,7 @@ blockquote::before {
 }
 
 .lonyo-process-wrap {
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   margin-top: 100px;
   padding-right: 43px;
 }
@@ -5387,7 +5391,7 @@ blockquote::before {
   content: "";
   width: 310px;
   height: 3px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   bottom: 19px;
   left: 0;
   position: absolute;
@@ -5534,7 +5538,7 @@ blockquote::before {
   padding: 30px 20px;
   margin-bottom: 24px;
   border-radius: 10px;
-  transition: all 0.4s;
+  transition: all 0.4s !important;
   border: 1px solid rgba(20, 45, 111, 0.1019607843);
 }
 .lonyo-integration-wrap:hover {
@@ -6063,7 +6067,7 @@ blockquote::before {
   margin-left: 30px;
   background-color: var(--light-color);
   margin-bottom: 24px;
-  position: sticky;
+  position: sticky !important;
 }
 @media (max-width: 991px) {
   .lonyo-about-us-feature-wrap {
@@ -6261,6 +6265,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   transition: all 0.4s;
   border: 1px solid var(--white-color);
   margin-bottom: 24px;
+  color: var(--light-color);
 }
 @media (max-width: 767px) {
   .lonyo-subscription-field3 input {
