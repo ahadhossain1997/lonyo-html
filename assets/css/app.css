@@ -2203,6 +2203,9 @@ a.lonyo-header-info img {
   font-family: "remixicon";
   transition: all 0.4s ease-in-out;
 }
+.main-menu ul li.menu-item-has-children.children2 a::after {
+  position: fixed;
+}
 .main-menu ul li:hover.menu-item-has-children > a:after {
   transform: rotate(-180deg);
 }
@@ -3028,12 +3031,12 @@ a.light-color {
   }
 }
 .lonyo-career-d-sidebar {
+  position: sticky;
+  top: 110px;
   padding: 40px;
   border-radius: 20px;
   margin-left: 80px;
-  position: sticky;
   transition: all 0.4s;
-  top: 120px;
   background-color: var(--heading-bg);
 }
 @media (max-width: 1199px) {
@@ -6743,7 +6746,6 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 .lonyo-section-padding3 {
   padding: 0 0 130px;
-  overflow: hidden;
 }
 @media (max-width: 991px) {
   .lonyo-section-padding3 {
@@ -6888,7 +6890,6 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 
 .lonyo-section-padding9 {
-  overflow: hidden;
   padding: 130px 0 35px;
 }
 @media (max-width: 991px) {
