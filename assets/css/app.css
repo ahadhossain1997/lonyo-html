@@ -7642,6 +7642,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
     height: 300px;
   }
 }
+.lonyo-default-btn.extra-btn.exta-btn2::after,
+.lonyo-subcribe-btn.extra-btn.exta-btn2::after,
+#lonyo-submit-btn.extra-btn.exta-btn2::after {
+  width: 760px;
+}
 .lonyo-default-btn.extra-btn2,
 .lonyo-subcribe-btn.extra-btn2,
 #lonyo-submit-btn.extra-btn2 {
