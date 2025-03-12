@@ -560,6 +560,21 @@ $(function () {
     $contentlis.hide().eq(index).show();
   });
 });
+$(function () {
+  var activeIndex = $('.active-tabb').index(),
+    $contentlis = $('.tabs-contentt li'),
+    $tabslis = $('.tabss li');
+
+  // Show content of active tab on loads
+  $contentlis.eq(activeIndex).show();
+  $('.tabss').on('click', 'li', function (e) {
+    var $current = $(e.currentTarget),
+      index = $current.index();
+    $tabslis.removeClass('active-tabb');
+    $current.addClass('active-tabb');
+    $contentlis.hide().eq(index).show();
+  });
+});
 
 /*--------------------------------------------------------------
 LONYO VERTICAL SLIDER JS INIT
