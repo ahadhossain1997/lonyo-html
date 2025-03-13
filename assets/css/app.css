@@ -6216,8 +6216,6 @@ blockquote::before {
   max-width: 1070px;
   margin: 0 auto;
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
 .lonyo-hero-rating {
   padding-bottom: 15px;
