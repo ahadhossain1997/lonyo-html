@@ -74,7 +74,7 @@ font-family: "DM Sans", sans-serif;
 vertical-align: baseline;
 text-rendering: optimizeLegibility;
 font-weight: 400;
-overflow-x: hidden;
+overflow-x: clip;
 background-color: var(--white-bg);
 counter-reset: my-sec-counter;
 font-size: 20px;
@@ -4987,12 +4987,18 @@ td span, th span {
 .lonyo-blog-d-comment-thumb img {
   border-radius: 100px;
 }
+.lonyo-blog-d-comment-data1 h5 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
 .lonyo-blog-d-comment-data1 span {
   font-size: 16px;
   line-height: 22px;
 }
 .lonyo-blog-d-comment-data1 p {
-  padding-top: 15px;
+  margin-top: 15px;
 }
 .lonyo-blog-d-comment-data span {
   font-size: 16px;
@@ -5660,6 +5666,9 @@ blockquote::before {
 }
 .lonyo-tab-section h2 {
   color: var(--light-color);
+}
+.lonyo-tab-wrap {
+  text-align: center;
 }
 .lonyo-tab-wrap ul li {
   color: var(--light-color);
@@ -7183,6 +7192,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 .lonyo-section-padding3 {
   padding: 0 0 130px;
+  overflow: hidden;
 }
 @media (max-width: 991px) {
   .lonyo-section-padding3 {
@@ -7328,6 +7338,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 .lonyo-section-padding9 {
   padding: 130px 0 35px;
+  overflow: hidden;
 }
 @media (max-width: 991px) {
   .lonyo-section-padding9 {
